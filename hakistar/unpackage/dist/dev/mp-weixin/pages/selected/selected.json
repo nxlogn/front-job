@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "精选",
+  "usingComponents": {
+    "uni-search-bar": "../../uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar",
+    "up-icon": "../../uni_modules/uview-plus/components/u-icon/u-icon",
+    "product-spec-popup": "../../components/products-spec-popup/product-spec-popup"
+  }
+}

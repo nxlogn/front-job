@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "服务",
+  "usingComponents": {
+    "up-notice-bar": "../../uni_modules/uview-plus/components/u-notice-bar/u-notice-bar",
+    "up-rate": "../../uni_modules/uview-plus/components/u-rate/u-rate",
+    "up-divider": "../../uni_modules/uview-plus/components/u-divider/u-divider"
+  }
+}

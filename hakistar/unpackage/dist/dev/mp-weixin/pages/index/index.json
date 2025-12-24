@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-search-bar": "../../uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar",
+    "up-scroll-list": "../../uni_modules/uview-plus/components/u-scroll-list/u-scroll-list",
+    "up-box": "../../uni_modules/uview-plus/components/u-box/u-box",
+    "up-rate": "../../uni_modules/uview-plus/components/u-rate/u-rate",
+    "up-divider": "../../uni_modules/uview-plus/components/u-divider/u-divider"
+  }
+}

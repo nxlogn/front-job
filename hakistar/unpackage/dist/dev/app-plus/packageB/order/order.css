@@ -1,0 +1,275 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.u-icon[data-v-ac70166d] {
+  display: flex;
+  align-items: center;
+}
+.u-icon--left[data-v-ac70166d] {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.u-icon--right[data-v-ac70166d] {
+  flex-direction: row;
+  align-items: center;
+}
+.u-icon--top[data-v-ac70166d] {
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+.u-icon--bottom[data-v-ac70166d] {
+  flex-direction: column;
+  justify-content: center;
+}
+.u-icon__icon[data-v-ac70166d] {
+  font-family: uicon-iconfont;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.u-icon__icon--primary[data-v-ac70166d] {
+  color: #3c9cff;
+}
+.u-icon__icon--success[data-v-ac70166d] {
+  color: #5ac725;
+}
+.u-icon__icon--error[data-v-ac70166d] {
+  color: #f56c6c;
+}
+.u-icon__icon--warning[data-v-ac70166d] {
+  color: #f9ae3d;
+}
+.u-icon__icon--info[data-v-ac70166d] {
+  color: #909399;
+}
+.u-icon__img[data-v-ac70166d] {
+  height: auto;
+  will-change: transform;
+}
+.u-icon__label[data-v-ac70166d] {
+  line-height: 1;
+}
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.order-create[data-v-913cca57] {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding-bottom: 3.75rem;
+}
+.order-create .address-section[data-v-913cca57] {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+.order-create .address-section .address-content[data-v-913cca57] {
+  flex: 1;
+}
+.order-create .address-section .address-content .user-info[data-v-913cca57] {
+  margin-bottom: 0.3125rem;
+}
+.order-create .address-section .address-content .user-info .name[data-v-913cca57] {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 0.625rem;
+}
+.order-create .address-section .address-content .user-info .phone[data-v-913cca57] {
+  font-size: 0.875rem;
+  color: #666;
+}
+.order-create .address-section .address-content .address-detail[data-v-913cca57] {
+  font-size: 0.875rem;
+  color: #666;
+}
+.order-create .address-section .no-address[data-v-913cca57] {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #999;
+}
+.order-create .goods-section[data-v-913cca57] {
+  background-color: #fff;
+  padding: 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+.order-create .goods-section .section-title[data-v-913cca57] {
+  font-size: 0.9375rem;
+  color: #333;
+  margin-bottom: 0.625rem;
+}
+.order-create .goods-section .goods-list .goods-item[data-v-913cca57] {
+  display: flex;
+  margin-bottom: 0.9375rem;
+}
+.order-create .goods-section .goods-list .goods-item .goods-img[data-v-913cca57] {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.375rem;
+  margin-right: 0.625rem;
+}
+.order-create .goods-section .goods-list .goods-item .goods-info[data-v-913cca57] {
+  flex: 1;
+}
+.order-create .goods-section .goods-list .goods-item .goods-info .goods-name[data-v-913cca57] {
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 0.3125rem;
+}
+.order-create .goods-section .goods-list .goods-item .goods-info .goods-spec[data-v-913cca57] {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.625rem;
+}
+.order-create .goods-section .goods-list .goods-item .goods-info .price-quantity[data-v-913cca57] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-create .goods-section .goods-list .goods-item .goods-info .price-quantity .price[data-v-913cca57] {
+  color: #ff4d4f;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.order-create .goods-section .goods-list .goods-item .goods-info .price-quantity .quantity[data-v-913cca57] {
+  font-size: 0.8125rem;
+  color: #999;
+}
+.order-create .delivery-section[data-v-913cca57] {
+  background-color: #fff;
+  padding: 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+.order-create .delivery-section .section-title[data-v-913cca57] {
+  font-size: 0.9375rem;
+  color: #333;
+  margin-bottom: 0.625rem;
+}
+.order-create .delivery-section .delivery-options .delivery-item[data-v-913cca57] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0;
+  font-size: 0.875rem;
+  color: #333;
+}
+.order-create .delivery-section .delivery-options .delivery-item .delivery-free[data-v-913cca57] {
+  color: #999;
+}
+.order-create .remark-section[data-v-913cca57] {
+  background-color: #fff;
+  padding: 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+.order-create .remark-section .section-title[data-v-913cca57] {
+  font-size: 0.9375rem;
+  color: #333;
+  margin-bottom: 0.625rem;
+}
+.order-create .remark-section .remark-input[data-v-913cca57] {
+  height: 2.5rem;
+  font-size: 0.875rem;
+  color: #333;
+}
+.order-create .amount-section[data-v-913cca57] {
+  background-color: #fff;
+  padding: 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+.order-create .amount-section .amount-item[data-v-913cca57] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+.order-create .amount-section .amount-item.total[data-v-913cca57] {
+  border-top: 0.0625rem solid #f5f5f5;
+  margin-top: 0.625rem;
+  padding-top: 0.625rem;
+  color: #333;
+  font-size: 0.9375rem;
+}
+.order-create .amount-section .amount-item.total .price[data-v-913cca57] {
+  color: #ff4d4f;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.order-create .settlement-bar[data-v-913cca57] {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.125rem;
+  padding: 0.625rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -0.0625rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+.order-create .settlement-bar .total-info[data-v-913cca57] {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #333;
+}
+.order-create .settlement-bar .total-info .price[data-v-913cca57] {
+  color: #ff4d4f;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.order-create .settlement-bar .submit-btn[data-v-913cca57] {
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: #ffce2c;
+  color: #fff;
+  border-radius: 1.25rem;
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 0.875rem;
+}

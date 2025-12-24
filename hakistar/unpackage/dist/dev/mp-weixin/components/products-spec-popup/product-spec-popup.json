@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "up-popup": "../../uni_modules/uview-plus/components/u-popup/u-popup"
+  }
+}

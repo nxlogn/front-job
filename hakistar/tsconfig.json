@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "lib": ["esnext", "dom"],
+        "types": [
+            "@dcloudio/types",
+            "uni-modules/uview-plus/types"
+        ]
+    },
+    "include": ["**/*.ts", "**/*.d.ts", "**/*.tsx", "**/*.vue"]
+}

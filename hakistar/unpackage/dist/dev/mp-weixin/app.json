@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/selected/selected",
+    "pages/service/service",
+    "pages/me/me",
+    "pages/cart/cart",
+    "pages/login/login"
+  ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "product-detail/product-detail"
+      ]
+    },
+    {
+      "root": "packageB",
+      "pages": [
+        "address/address",
+        "merchant/merchant",
+        "merchant-detail/merchant-detail",
+        "order/order"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ffce2c",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/common/images/home.png",
+        "selectedIconPath": "/static/common/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/selected/selected",
+        "text": "精选",
+        "iconPath": "/static/common/images/sel.png",
+        "selectedIconPath": "/static/common/images/sel-active.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "服务",
+        "iconPath": "/static/common/images/service.png",
+        "selectedIconPath": "/static/common/images/service-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/static/common/images/me.png",
+        "selectedIconPath": "/static/common/images/me-active.png"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/selected/selected": {
+      "network": "wifi",
+      "packages": [
+        "packageA"
+      ]
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于展示附近服务"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {}
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商家详情",
+  "usingComponents": {
+    "up-rate": "../../uni_modules/uview-plus/components/u-rate/u-rate",
+    "up-button": "../../uni_modules/uview-plus/components/u-button/u-button",
+    "up-icon": "../../uni_modules/uview-plus/components/u-icon/u-icon"
+  }
+}

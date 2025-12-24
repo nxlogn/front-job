@@ -1,0 +1,179 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.address-page.data-v-392a643a {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+.address-page .address-list .address-item.data-v-392a643a {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.address-page .address-list .address-item .address-info.data-v-392a643a {
+  flex: 1;
+}
+.address-page .address-list .address-item .address-info .contact-info.data-v-392a643a {
+  margin-bottom: 10rpx;
+}
+.address-page .address-list .address-item .address-info .contact-info .name.data-v-392a643a {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-right: 20rpx;
+}
+.address-page .address-list .address-item .address-info .contact-info .phone.data-v-392a643a {
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+.address-page .address-list .address-item .address-info .contact-info .default-tag.data-v-392a643a {
+  background-color: #ffce2c;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+}
+.address-page .address-list .address-item .address-info .address-detail.data-v-392a643a {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.4;
+}
+.address-page .address-list .address-item .address-actions.data-v-392a643a {
+  display: flex;
+}
+.address-page .address-list .address-item .address-actions .action-btn.data-v-392a643a {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+.address-page .empty-state.data-v-392a643a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100rpx 0;
+}
+.address-page .empty-state .empty-text.data-v-392a643a {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.address-page .add-btn.data-v-392a643a {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx;
+  background-color: #ffce2c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.address-page .add-btn text.data-v-392a643a {
+  margin-left: 16rpx;
+}
+.address-form .form-title.data-v-392a643a {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40rpx;
+  margin-top: 20rpx;
+}
+.address-form .form-item.data-v-392a643a {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.address-form .form-item .label.data-v-392a643a {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+.address-form .form-item .input.data-v-392a643a {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+.address-form .form-item .def.data-v-392a643a {
+  margin: 0 20rpx;
+}
+.address-form .form-item .textarea.data-v-392a643a {
+  flex: 1;
+  height: 120rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.address-form .form-item .region-display.data-v-392a643a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #333;
+}
+.address-form .form-item .region-display text.data-v-392a643a {
+  color: #666;
+}
+.address-form .form-item .region-display .right.data-v-392a643a {
+  margin-right: 20rpx;
+}
+.address-form .form-actions.data-v-392a643a {
+  display: flex;
+  margin-top: 40rpx;
+}
+.address-form .form-actions .cancel-btn.data-v-392a643a, .address-form .form-actions .save-btn.data-v-392a643a {
+  flex: 1;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 40rpx;
+  margin-right: 16rpx;
+}
+.address-form .form-actions .cancel-btn.data-v-392a643a {
+  background-color: #f5f5f5;
+  color: #666;
+}
+.address-form .form-actions .save-btn.data-v-392a643a {
+  background-color: #ffce2c;
+  color: #fff;
+}
