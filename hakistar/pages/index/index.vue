@@ -44,7 +44,7 @@
 							<image class="box-image" src="/static/modules/home/pic2.png" mode="aspectFill"></image>
 						</template>
 						<template #rightBottom>
-							<image class="box-image" src="/static/modules/home/pic3.png" mode="aspectFill"></image>
+							<up-image width="100%" height="100%" radius="16rpx" src="/static/modules/home/pic3.png" mode="aspectFill" lazy-load></up-image>
 						</template>
 					</up-box>
 				</view>
@@ -57,13 +57,13 @@
 				</view>
 				<view class="promo-cards">
 					<view class="promo-card">
-						<image class="img-placeholder" src="/static/modules/home/pic4.jpg" mode="aspectFill"></image>
+						<up-image width="100%" height="160rpx" radius="8rpx" src="/static/modules/home/pic4.jpg" mode="aspectFill" lazy-load></up-image>
 						<text class="promo-title">到店服务</text>
 						<text class="promo-desc">限时降价</text>
 						<view class="samll-go">GO</view>
 					</view>
 					<view class="promo-card">
-						<image class="img-placeholder" src="/static/modules/home/pic5.jpg" mode="aspectFill"></image>
+						<up-image width="100%" height="160rpx" radius="8rpx" src="/static/modules/home/pic5.jpg" mode="aspectFill" lazy-load></up-image>
 						<text class="promo-title">领券中心</text>
 						<text class="promo-desc">618立减</text>
 						<view class="samll-go">GO</view>
@@ -71,8 +71,11 @@
 				</view>
 			</view>
 			
-			<view class="service-card" v-for="item in merchanList" :key="item.merchant_id">
-				<image class="service-img" mode="aspectFill" :src="item.pic"></image>
+			<up-skeleton :rows="3" title :loading="loading" avatar rowsHeight="14"></up-skeleton>
+			<view class="service-card" v-for="item in merchanList" :key="item.merchant_id" v-show="!loading">
+				<view class="service-img-wrapper">
+					<up-image width="160rpx" height="160rpx" radius="8rpx" mode="aspectFill" :src="item.pic" lazy-load></up-image>
+				</view>
 				<view class="service-info">
 					<text class="service-name">{{item.merchant_name}}</text>
 					<view class="rate-area">
@@ -254,6 +257,7 @@
 	const merchanList=ref<MerchantItem[]>([])
 	const currentPage=ref<number>(1)
 	const totalPages=ref<number>(0)
+	const loading = ref<boolean>(true)
 	const getMerchanList=async (page:number)=>{
 		try {
 			const data:any=await get("/home/merchants",{page});
@@ -266,7 +270,9 @@
 			currentPage.value=data.pagination.current
 		} catch (error) {
 			console.error("获取失败")
-		}	
+		} finally {
+			loading.value = false
+		}
 	}
 	const goMerchant=(title:string)=>{
 		uni.navigateTo({
@@ -447,11 +453,7 @@
 				border-radius: 16rpx;
 				margin: 10rpx 0 10rpx 0;
 				padding: 20rpx;
-				.service-img{
-					width: 160rpx;
-					height: 160rpx;
-					background-color: #ddd;
-					border-radius: 8rpx;
+				.service-img-wrapper {
 					margin-right: 20rpx;
 					margin-top: 8rpx;
 				}

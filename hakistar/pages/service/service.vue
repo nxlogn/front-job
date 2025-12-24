@@ -10,8 +10,12 @@
 			</view>
 		</view>
 		<view class="pet-images">
-			<image src="/static/modules/service/dog.jpg" mode="aspectFill"></image>
-			<image src="/static/modules/service/cat.jpg" mode="aspectFill"></image>
+			<view class="pet-image-item">
+				<up-image width="100%" height="100%" src="/static/modules/service/dog.jpg" mode="aspectFill" lazy-load></up-image>
+			</view>
+			<view class="pet-image-item">
+				<up-image width="100%" height="100%" src="/static/modules/service/cat.jpg" mode="aspectFill" lazy-load></up-image>
+			</view>
 		</view>
 		<view class="fish-bone">
 			<image src="/static/modules/service/鱼骨头.png" mode="aspectFit"></image>
@@ -19,7 +23,9 @@
 		</view>
 		<scroll-view scroll-x class="scroll-view">
 			<view class="scroll-view-item" v-for="item in adoptList" :key="item.id">
-				<image :src="item.pic" mode="aspectFill"></image>
+				<view class="adopt-img-wrapper">
+					<up-image width="100%" height="100%" :src="item.pic" mode="aspectFill" shape="circle" lazy-load></up-image>
+				</view>
 				<text>{{item.location}}</text>
 				<text>{{item.name}}</text>
 				<text>待领养：{{item.count}}只</text>
@@ -30,8 +36,11 @@
 			<image src="/static/modules/service/鱼骨头.png" mode="aspectFit"></image>
 			<text>附近商家</text>
 		</view>
-		<view class="service-card" v-for="item in merchanList" :key="item.merchant_id">
-			<image class="service-img" mode="aspectFill" :src="item.pic"></image>
+		<up-skeleton :rows="3" title :loading="loading" avatar rowsHeight="14"></up-skeleton>
+		<view class="service-card" v-for="item in merchanList" :key="item.merchant_id" v-show="!loading">
+			<view class="service-img-wrapper">
+				<up-image width="100%" height="100%" mode="aspectFill" :src="item.pic" radius="8rpx" lazy-load></up-image>
+			</view>
 			<view class="service-info">
 				<text class="service-name">{{item.merchant_name}}</text>
 				<view class="rate-area">
@@ -132,6 +141,7 @@
 	const merchanList=ref<MerchantItem[]>([])
 	const currentPage=ref<number>(1)
 	const totalPages=ref<number>(0)
+	const loading=ref<boolean>(true)
 	const getMerchanList=async (page:number)=>{
 		try {
 			const data:any=await get("/home/merchants",{page});
@@ -144,7 +154,9 @@
 			currentPage.value=data.pagination.current
 		} catch (error) {
 			console.error("获取失败")
-		}	
+		} finally {
+			loading.value = false
+		}
 	}
 	
 	onReachBottom(()=>{
@@ -199,13 +211,15 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 20rpx;
-		image{
-			width: 360rpx;
-			height: 140rpx;
-			border: 4rpx solid #fff;
-			&:first-child{
-				margin-right: 20rpx;
-			}
+		/* Removed image selector */
+	}
+	.pet-image-item {
+		width: 360rpx;
+		height: 140rpx;
+		border: 4rpx solid #fff;
+		border-radius: 8rpx;
+		&:first-child{
+			margin-right: 20rpx;
 		}
 	}
 	.fish-bone{
@@ -230,11 +244,9 @@
 		border-radius: 16rpx;
 		margin: 10rpx 0 10rpx 0;
 		padding: 20rpx;
-		.service-img{
+		.service-img-wrapper{
 			width: 160rpx;
 			height: 160rpx;
-			background-color: #ddd;
-			border-radius: 8rpx;
 			margin-right: 20rpx;
 			margin-top: 8rpx;
 		}
@@ -336,7 +348,7 @@
 			position: relative;
 			padding: 20rpx;
 			margin-top: 80rpx;
-			image{
+			.adopt-img-wrapper{
 				width: 120rpx;
 				height: 120rpx;
 				border-radius: 50%;

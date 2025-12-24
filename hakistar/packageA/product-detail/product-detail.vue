@@ -2,7 +2,7 @@
 	<view class="product-detail">
 		<swiper class="swiper" circular indicator-dots autoplay :interval="3000" :duration="1000">
 			<swiper-item v-for="(item) in productImages" :key="item.id">
-				<image :src="item.img_url" mode="aspectFill"></image>
+				<up-image width="100%" height="100%" :src="item.img_url" mode="aspectFill"></up-image>
 			</swiper-item>
 		</swiper>
 		<!--商品信息-->
@@ -26,14 +26,15 @@
 		<view class="detail-section">
 			<view class="section-title">商品详情</view>
 			<view class="detail-content">
-				<image 
+				<up-image 
 					v-for="item in productImages"
 					:key="item.id"
 					mode="widthFix"
-					class="detail-image"
+					width="100%"
+					radius="12rpx"
 					:src="item.img_url"
-					
-				></image>
+					lazy-load
+				></up-image>
 			</view>
 		</view>
 		<!--底部操作区域-->

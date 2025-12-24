@@ -1,5 +1,5 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -83,8 +83,16 @@
 	],
 	"preloadRule":{
 		"pages/selected/selected":{
-			"network": "wifi",
+			"network": "all",
 			"packages":["packageA"]
+		},
+		"packageA/product-detail/product-detail":{
+			"network": "all",
+			"packages":["packageB"]
+		},
+		"pages/cart/cart":{
+			"network": "all",
+			"packages":["packageB"]
 		}
 	},
 	"easycom": {

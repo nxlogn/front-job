@@ -24,9 +24,10 @@
 				<!--右侧商品-->
 				<scroll-view scroll-y class="category-right">
 					<view class="category-title">{{categories.length>0?categories[currentCategory].category_name:"暂无数据"}}</view>
-					<view class="product-list">
+					<up-skeleton :loading="loading" :rows="3" avatar title rowsHeight="14"></up-skeleton>
+					<view class="product-list" v-show="!loading">
 						<view class="product-item" v-for="item in products" :key="item.id">
-							<image :src="item.main_pic" mode="aspectFill" class="product-image" @click="goProductDetail(item)"></image>
+							<up-image width="100%" height="200rpx" :src="item.main_pic" mode="aspectFill" lazy-load @click="goProductDetail(item)"></up-image>
 							<view class="product-info">
 								<text class="product-name">{{item.name}}</text>
 								<view class="price-row">
@@ -91,7 +92,9 @@ const getCategories=async ()=>{
 //获取商品列表
 const products=ref<ProductItem[]>([])
 const totalPages=ref<number>(0)
+const loading=ref<boolean>(false)
 const getProducts=async(page:number,category_id:number)=>{
+	loading.value = true
 	try {
 		const data:any=await get("/sel/products",{page,category_id})
 		if(page==1){
@@ -103,6 +106,8 @@ const getProducts=async(page:number,category_id:number)=>{
 		currentPage.value=page
 	} catch (error) {
 		console.error(error)
+	} finally {
+		loading.value = false
 	}
 }
 
